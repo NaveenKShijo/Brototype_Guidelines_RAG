@@ -1,0 +1,10 @@
+langchain
+llama-index
+chromadb
+sentence-transformers
+google-generativeai
+pypdf
+python-dotenv
+langchain-google-genai
+llama-index-embeddings-huggingface
+llama-index-vector-stores-chroma
