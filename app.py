@@ -28,9 +28,9 @@ def initialize_rag():
 
 retriever, llm = initialize_rag()
 
-st.title("📚 RAG Document Assistant")
+st.title("Brototype Guidelines Assistant")
 
-st.write("Ask questions about the uploaded documents")
+st.write("Shoot me questions to help you avoid warning mails & suspensions: ")
 
 question = st.text_input("Ask a question:")
 

@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 
 load_dotenv() # it reads the .env file and loads secrets like API keys that aren't hardcoded in the source code.
 
+
 # API keys
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
