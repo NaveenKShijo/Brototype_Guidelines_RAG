@@ -38,5 +38,9 @@ if question:
 
     answer = generate_answer(question, retriever, llm)
 
+    st.write("Loaded docs: ", len(documents))
+    st.write("Chunks: ", len(nodes))
+    st.write("Vector count: ", vectordb.index.nototal)
+    
     st.write("### Answer")
     st.write(answer)
