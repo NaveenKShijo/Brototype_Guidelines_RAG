@@ -1,3 +1,16 @@
+# Streamlit Cloud SQLite patch for ChromaDB
+
+# Chromadb requires a minimum SQLite3 version of 3.35. Streamlit Cloud's default environment 
+# uses an older version of SQLite3, causing apps to crash on load. This patch safely swaps the
+#  SQLite version during runtime on the cloud.
+
+try:
+    __import__('pysqlite3')
+    import sys
+    sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+except ImportError:
+    pass
+
 import streamlit as st
 
 from src.ingest import load_documents, chunk_documents
